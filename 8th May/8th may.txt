@@ -1,0 +1,147 @@
+1. Load the data
+2. Explore the data
+3. Feature Selection (Totally based on business understanding)
+4. Feature Selection (Statistical understanding)
+	a. Remove columns having variance = 0
+	b. Remove columns having too many null values/ outliers
+	c. Remove columns which are highly collinear with the other features
+5. Feature Generation
+	a. Address - > New York, 12345
+		Split this as name | pincode (two separate columns)
+	b. Add dummy column
+6. Separate the numeric and categorical variables
+7. Split into train and test data
+8. On the numeric you fit your PCA on train data and get the dimensions reduced
+		Reduced numeric columns + categorical variables
+	On test data transform your dimensions using PCA saved earlier
+9. Scaling and Encoding is done
+	On the numeric train data we learn(fit) & apply(transform) scaling and 		save the scalers
+	On the categorical train data learn(fit) & apply(transform) encoding 		and save the encoders
+
+	On the test data
+		Transform using saved scalers and encoders
+10. Fit your model
+11. Predict
+12. Evaluate	
+
+
+Recommender Algorithms
+_________________________
+
+1. Content based 
+   ______________
+	
+	Recommends items corresponding to the user's profile
+	This profile is created by the purchase history of the user
+
+	The profile is matched with the features of an item. And the relevance
+	score is calculated. This relevance score helps me to rank the items
+	accordingly
+
+	This approach does not require to know who are the user's friends,
+	community, a long history
+
+	For a book, the features can be genre, author, publisher and year.
+	A user shows an interest in some book.
+
+	I will evaluate the features for the user against his interest
+
+
+	Advantages :
+	
+	1. they will recommend items to the users according to what they have
+	   liked in the past.
+	2. They take user's profile into account for this; creation of this
+	   profile is an easy job
+	3. data related to other users are not required
+	4. No Cold Start Problem - A New user (Age, Gender .....)
+			 	I can start recommending items based on user's
+				profile
+	5. New items or unpopular items can also be recommended 
+
+	Disadvantages:
+	
+	1. Every item requires a feature representation
+	2. Users who have already seen a large number of items are difficult to 
+	   deal with
+	3. No user history for a new user
+	4. User profiles are difficult to create
+	5. User needs to provide feedback of the items he has appreciated. 
+
+
+Collaborative Approach
+______________________
+
+	The recommendations are based on calculating similarities between the
+	preferences of different users. 
+
+	User 1  Item A _______________________
+	User 2  Item A Item B
+	User 3  Item C
+
+	I have to collect the opinions of a large number of users. 
+
+
+	If a user has purchased a mobile; then he will be recommended
+	mobile cover, charger etc
+	I can recommend him some games to be played
+
+	Approaches:
+
+	Item-Item similarity, based on sim between items(millions of 	users,items)
+	User-User approach, based on sim between users (millions of users)
+
+	
+	User/Course    Python    ML    AWS    Devops
+
+	John                     4              0
+
+	Jack              2      3              1
+
+	Marie             4              5      0
+	
+
+	Advantages :
+	
+	1. USe of other users scores are highly effective
+	2. the more the no of users the more the scores and the better the 		quality
+	
+	Disadvantages :
+
+	1. What if you have a low density USer * item matrix ?
+	2. Cold start problem
+
+
+	
+	Knowledge systems
+	__________________
+
+		Knowledge explicitly obtained by combining items, preferences 
+	and recommendation criteria)
+
+
+	Similarity measures
+	____________________
+
+	1. Cosine Similarity
+
+		i1.i2/|i1||i2|
+
+		If two users are highly similar then cos 0 = 1
+		If they are totally differnet then cos 90 = 0
+
+	  In item-item sim we use this measure
+
+	2. Pearson correlation
+		
+		sim(i1,i2) = cossim(i1-i1^, i2-i2^)
+
+	  Mostly used for user- user similarity
+
+
+	
+
+
+
+
+

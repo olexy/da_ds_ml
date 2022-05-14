@@ -1,0 +1,17 @@
+1. Go through the Logistic Regression code and evaluation metrics. 
+
+2. Upload the Titanic data
+
+3. Read the data, Explore the data, Clean and process the data for modelling. 
+
+The dataset is in Lesson 4 by the name "train.csv"
+
+4. Build the model replacing the mean of the AGE column and see the evaluation metrics
+
+5. Re build the model by replacing the mean with the groupby of Pclass and observe the metrics
+
+6. Include the two columns left out i.e. "SibSp" and "Parch" and see if this changes the metrics
+
+7. Go through the two links for standard scaler and min max scaler on sklearn documentation
+
+8. Go through the Feature Engineering notebook before tomorrow's session

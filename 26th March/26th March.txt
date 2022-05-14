@@ -1,0 +1,256 @@
+Machine Learning Advanced Certification
+_______________________________________
+
+Name : Mohammad Wajahat
+Belong : Prayagraj (formerly known as Allahabad), Uttar Pradesh, India
+Bachelors in Information Technology (IIIT, Allahabad) - Not a very good student
+Certification from IIIT Hyderabad - AI ML - 
+
+AWT - SQL Developer (Database Management)
+      .Net Developer(C#)
+      Php
+      Data Analysis - Textile Industry	
+      Data Science - Big Data and Hadoop
+	Machine Learning 
+	Natural Language Processing - 
+		How can machines understand(decode) human languages?
+		At FB, 
+	Chatbots - 
+
+Gradvalley - Healthcare startup 
+		Reproducing few research papers for translational DS. 
+	   - Resume Parser  - Deep Learning Techniques
+		
+GSK - Market Mix model
+Birlasoft - Cyber Regulations - AI Assisted Search, Semantic Similarity
+				Evidence Scoring, Hierarchical Document Parsing
+
+Father - poet
+	
+Resources:
+Community Link, Drive link, Self Learning, Practice Labs, Assessments, Ebooks, Datasets
+
+
+
+Session Flow : 
+
+First few(10, 15) is registered for asking queries from previous session. 
+Agenda : 
+	1. Explain you the intuition behind the task
+	2. The mathematics, if possible
+	3. Other details
+	4. Walkthrough a solved exercise(use case)
+	5. In-class assignment
+
+7....9 30 polling activity break : 20 minutes	
+
+Last 30 minutes I reserve for discussion.
+
+Ground Rules :
+
+1. Use the chatbox only after complete delivery of the topic
+2. In case of any issues in practicals, take a screenshot of the error and
+	upload it in community forum with a small writeup of the issue
+3. Share you the agenda, and you have to be prepared with the terms used in the topic to be covered.
+
+
+Pre-requisites
+______________
+
+
+	1. Mathematics - Linear Algebra 
+	2. Probability and statistics - 
+	3. Python - 
+
+The syllabus
+____________
+
+
+	1. Look into the prequisites - Calculate in python
+	2. Introduction to AI and ML
+	3. Data Pre-processing
+	4. Supervised Learning - Regression
+		Linear Regression
+		Gradient Descent Algorithm
+		Multiple Linear Regression
+		Polynomial Regression
+		Challenges in prediction
+		Regularization
+		Ridge Regression
+		Lasso Regression
+		Elastic Net Regression
+		Evaluation metrics for regression
+			MAE
+			MSE
+			RMSE
+			R squared
+			Adj R squared
+		Logistic Regression
+		Evaluation Metrics for Logistic (Classification)
+			Accuracy
+			Confusion Matrix
+			Precision
+			Recall
+			F1 score
+			ROC and AUC - Self
+	5. Feature Engineering 
+		Transformation
+		Encoding
+		Replacement of missing values
+	6. Supervised Learning - Classification
+		Decision Trees
+		Ensemble Methods
+			Voting Classifier
+			Bagging
+			Random Forest
+			AdaBoost
+			Gradient Boost
+			XGBoost
+		Naive Bayes
+		Support Vector Machines
+	7. Unsupervised Learning
+		Clustering
+			Hierarchical Clustering
+			KMeans Clustering
+			GMM (If time permits)
+		Dimensionality Reduction
+			Projection
+			PCA
+	8. TimeSeries Models
+		Data Exploration
+		Seasonality	
+		Stationarity
+		Models
+			AutoRegressive (AR)
+			Moving Average (MA)
+			ARMA
+			ARIMA
+	9. Recommender Systems
+		History
+		Netflix Recommendation
+		Types
+			Content Based
+			Collaborative Based
+			Hybrid
+		Similarity Metrics
+			Euclidean Distance
+			Cosine
+			Adjusted Cosine(Pearson Correlation)
+		Association Rule Mining
+			Apriori Algorithm
+	10. Text Mining
+		Basics of text pre-processing
+		Syntactic Analysis
+		Parse Tree
+		Chunking
+		Context Free Grammar
+
+
+Introduction to Artificial Intelligence and Machine Learning
+____________________________________________________________
+
+
+Machine Learning
+________________
+
+	Traditional Programming
+	________________________
+	
+		Adding two numbers
+
+		Take number as input
+		1. a = 4
+		2. b = 3
+		
+		Write the logic
+		
+		sum = a + b
+
+		Return the output
+		
+		return sum
+
+
+		Inputs + Logic ------> Output
+
+	
+	Machine Learning
+	__________________
+
+		1. Input = 3,2 | Output = 1
+		2. Input = 1,1 | Output = 0
+		3. Input = 0,3 | Output = -3
+		.
+		.
+		.
+		.
+
+		Input + Output ------> Logic/Pattern
+		Output = Input(1) - Input(2)
+
+		Example:
+
+		Redness | Roundness | Price | Fruit
+
+		   3.4       5          4     Orange
+		   7.5       2.3	12    Apple
+			.
+			.
+			.
+			.
+			.
+			.
+		Given Redness = 5.5
+		      Roundness = 7.8
+		      Price = 8
+
+		     Fruit - Apple
+		
+	
+
+Use Case : PHI Scrubber
+	   
+	  
+Agenda
+
+1. Statistical Properties
+2. Distributions
+3. Hypothesis
+4. P value
+5. Data Pre-processing
+	Use Pandas
+	Read the data
+	Explore the data
+	Data Visualize
+	Data Wrangling
+	Data Manipulation
+
+
+
+
+
+
+
+UI/UX team React
+Service team
+	Java
+Data team
+	DB
+ML Team
+	Python developers
+	ML
+	NLP
+	DS
+BA Team
+	
+Devops 
+	MLOPS
+	CI/CD
+Testing
+	
+
+ 
+
+
+
+

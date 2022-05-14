@@ -1,0 +1,75 @@
+Types
+
+1. Score Estimation Method
+
+	a. Heuristics - Design rules to identify the utility function and 
+			validate it empirically. 
+	b. Model - Use a ML model(statistical, probabilistic) to learn the 
+			predictions of score
+
+2. By Data Exploitation
+
+	Content based method - You bought a mobile phone.
+				I will search for similar items to mobile
+				mobile cover, guard, earphone, wireless 
+				charger....
+
+				Use the item - item similarity and then
+				suggest you the items which are highly similar.
+
+	Collaborative Method - Lets say you bought a mobile phone
+				I have 3 more users in my DB. User1, User2 and 				User3
+				Find similar users to you using purchase 
+				history. Lets say you are having a similar
+				purchase behaviour to user2. So I will look 
+				for what did user2 buy along with the phone.
+				The user2 bought an earphone. Hence I will
+				suggest you to buy earphone.
+
+	Lets say you bought a cooler. 
+			 Similar items to cooler are AC, Refrigerator etc
+	But if I know that your friend who also bought a cooler had purchased
+			a motor to run the cooler from company ABC
+			Then I can recommend you to purchase the same
+			motor ABC for your cooler. Why????
+				
+	Hybrid Approach - Both the content and collaborative
+
+	
+User Profiles :
+
+	Explicit Data Collection : 
+		User providing his opinion, choose the relevant item or add to 
+		cart
+
+	Implicit Data Collection :
+		User visiting an item already seen, keep track of browsing 
+		history, analyze the user's social network
+
+
+Concepts required for the next class
+
+1. Pearson Correlation
+2. Cosine Similarity
+3. Association Rule mining Slide 23 - 37 in lesson 9
+
+Agenda
+
+1. Collaborative Fitering
+2. Association Rule mining
+3. Text Mining	
+
+
+
+
+1. Take the train data
+2. Explore it and Transform it
+3. Split the train data into 2
+	train and validation
+4. Fit your model on train and evaluate on validation
+5. Once evaluation is done then use the model to predict on test data
+	provided.
+
+
+
+
