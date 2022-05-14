@@ -1,0 +1,109 @@
+Shift + tab + tab  >>> willl give a detailed docimentation about a built-in function
+
+.Tab >>> will give a list of built-in methods & attributes for a Python object.
+
+---------------------------------
+Each Python datatype >> class 
+
+Each "Class": 2 things typically
+- built-in attributes(arguements/variables...) >>> these are some properties (holds the values)
+- built-in methods (functions) >>>> these are some functions, using which you can "operate" on the value/s stored in that object.
+
+"object" is created when you create an instance of that "class".
+To be able to use these "classes", we have to first instantiate them.
+
+s1 = 'Hello'
+'Hello' >>> this is the "object" ( of the class "str") created in the memory stack.
+s1 >>>  just a pointer to that object !!!
+
+s2 = 'World'
+
+*** objects inherit all the attributes & methods of the base class!
+
+===========================
+Class Circle()
+	pi = 3.14 (read-only attribute)
+	radius = 5 (settable attribute)
+
+	def get_area(self, radius, pi):
+		return pi*radius**2
+
+	def get_perimeter(self, radius, pi):
+		return 2*pi*radius
+
+
+a = Circle(radius=10)   % you are creating an instance of the class "Circle" !
+a.radius >>> press enter >>> you will get a value of 10
+a.radius = 20  >>> this will "set" the "radius" attribute to a new value of 20!
+
+a.get_area()  >>> give you a value of pi*20*20
+
+b = Circle(radius=50)
+
+
+===============
+Indexing in Python:
+- Linear (valid only for 1D Python objects)
+- Boolean / Conditional / Logical
+- [row, col] >>> only possible 2D objects
+
+=================
+ALL Core Python objects (list, tuple, dict, str, set) are 1D Python objects
+
+Core Python functions: print, type, id, len, sorted, input, range
+
+Core Python Data types: int, float, bool, str, complex
+
+Core Python Data Structures: Containers / Collections in Python 
+- list, str, dict, tuple, set
+
+- [List]: mutable, indexable, iterables, sortable*
+list is sortable ONLY IF it contains objects of the SAME datatype.
+
+- (tuple): immutable, indexable, iterables, sortable* (there is no built-in method for sorting)
+(tuples as reference lists).... tuples are "read-only" lists
+
+- 'str': immutable, indexable, iterables, sortable
+Strings object is a collection of characters (could also contain numbers, spl char)
+
+-dict >> {key:val} pairs :::: mutable, indexable*, iterables, non-sortable (because they are NOT indexable)
+unordered collection of key-value pairs... the keys are unique.
+
+- {set} : mutable, non-indexable, iterables, non-sortable (because they are NOT indexable)
+set is a unordered collection UNIQUE items/objects
+
+*TnC Apply.
+
+==============
+Using iterations, we can fetch the elements of an iterable in 3 ways:
+- using "range": we can fetch the "indices" of the elements of the iterable
+- using "in" : we can directly fetch the "values" of the elements of the iterable
+- using "enumerate": we can fetch BOTH the index, as well as the "values" of the elements of the iterable, simultaneously.
+
+indentation is "expected" for programming constructs only:
+- for, while loops
+- if-else conditions
+- try-except
+- def (function definitions)
+- class (class definitions)
+
+=====================
+
+https://www.tutorialspoint.com/python/index.htm
+https://www.geeksforgeeks.org/python-programming-language/
+http: www.programiz.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

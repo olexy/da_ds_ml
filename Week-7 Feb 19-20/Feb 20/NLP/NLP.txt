@@ -1,0 +1,246 @@
+NLP: is NOT model building
+
+NLP: make the raw text ready for model building
+Net project: NLP + Model Building
+
+SEMANTICALLY, SYNTACTICALLY
+
+NLP applications: Text classification (not limited to Sentiment Analysis), Text summarization (Abstractive or Extractive), NER (Named Entity Recognition), Part Of Speech (POS) Tagging, Topic Modelling (Latent Dirichet Allocation, Non-Negative Matrix Factorization),
+WSD (Word Sense Disambiguation)
+
+sms/email: spam/not spam
+movie/product reviews: pos/neutral/neg
+twitter sentiment analysis
+hate speech recog..
+
+*****************
+chatbot: Query text
+- intent
+- entities
+- query fulfillment
+
++++++++++++++++
+NLP Libraries:
+1. NLTK (base framework)
+2. SpaCy (NLP framework, similar to NLTK)
+3. TextBlob (wrapper over nltk)
+4. Gensim (contains some pre-trained models & un-tranied for NLP)
+...
+
+=================
+Common terms in NLP:
+- Corpus: this is your entire dataset. Collection of documents.
+
+- Document: Single data-point for NLP (individual sms/email/tweet/review..)
+Document may contain several paragraphs. Each paragraph will contain several lines.
+Each line will contain several words.
+
+Corpus >> Document >> Paragraph >> Sentences >> Words or word phrases
+
+- Token: the individual word/phrases/sents to be used for creating the vocab. 
+Python list containing string >> tokens
+N-gram tokenization: def  "N" = 1.
+
+- Vocabulary: Collection of Tokens from the entire Corpus!
+Collection (list, dict, "Counter" from the "collections" package ) of ALL the unique tokens from ALL the documents.
+key: actaul word
+value: word freq
+
+==================
+https://scikit-learn.org/stable/tutorial/text_analytics/working_with_text_data.html
+
+===================
+document: The crisis in Punjab Congress escalated on Thursday with a flurry of meetings held by both sides. Sources said Chief Minister Amarinder Singh is against the Central leaders' peace formula where Navjot Sidhu is to be elevated as state Congress chief.
+
+Word-Level Tokens (Uni-gram): ["The", "crisis",  "in",  "Punjab",  "Congress".........]
+Sent-Level Tokens: ["The crisis in Punjab Congress escalated on Thursday with a flurry of meetings held by both sides.",
+ " Sources said Chief Minister Amarinder Singh is against the Central leaders' peace formula where Navjot Sidhu is to be elevated as state Congress chief."]
+
+Bi-gram Tokens: =["The crisis", "crisis in", "in Punjab". .....]
+Tri-gram Tokens: =[" The crisis in", "crisis in Punjab" ...   ]
+
+Post stopwords tokens:  ["crisis",  "punjab",  "congress", "go", "goes",  "went", ...]
+Post Stemming tokens:  ["crisis",  "punjab",  "congress", "go",  "went", ...]
+Post Lemmatization tokens:  ["crisis",  "punjab",  "congress", "go"... ]
+
+["lie", "lies",....]
+Stemming: ["lie", "li",....]
+Lemmatization: ["lie",...]
+
+===================
+Size of the Vocab will determine the size of "features"!! (in most basic sense, each word of the vocab IS/CAN BE considered as a feature!)
+This Vocab will be used to make your Corpus structured!! (N no. of documents x m no. of words)
+
+Steps in a NLP Application/ Project (Movie Review dataset) ::: CLASSIFICATION TASK
+1. Load the text data
+
+2. Data Cleaning:
+
+- Tokenization
+- Convert your entire text into lower case (Case normalization)
+
+- Get rid punctuations, web urls, hashtags, smileys, short forms, numbers: mostly done using Regex
+he'll >>> he will (Contraction mapping)
+
+- Get rid of the "Stop Words" (most freq words of that domain, which are not so discrimative/informative.
+movie, film, actor, dir, song, cast, story
+a, an, the, he, she ... >> this list is built-in in NLTK, SpaCy
+
+- Text normalization: Stemming, Lemmatization (Use ONLY ONE!)
+Stemming: get rid of the inflectional forms of the word tokens. convert a word token into its "base" form. Stemming leads to "non-dictionary" words. FASTER
+
+Lemmatization: convert a word token into its root form. It imports a lang-dict,  so that it makes sure that the "reduced" root word is a dict-word. SLOWER
+
+3. Making the Corpus ready for Modelling
+orig txt: "The crisis in Punjab Congress escalated ..."
+clean txt: "crisis punjab congress go" 
+
+4. Actual Modelling Step (depends on the final application)
+
+======================
+
+X = ["I love cooking", "I cooked pasta today" ]
+y = [1,0]
+
+svc = LinearSVC()
+svc.fit(X,y)  ????
+
+cleaned_doc1: "i love cook"
+cleaned_doc2: "i cook pasta today"
+
+vocab:       [i, love,     cook,   pasta,     today]
+              0    1         2        3          4
+endoced_doc1:[0, 1, 2 ]
+endoced_doc2:[0, 2,3,4]
+
+X = [ [0, 1, 2, 100],  [0, 2,3,4] ]
+y = [1,0]
+svc = LinearSVC()
+svc.fit(X,y)  ????
+
+=================
+
+Step 3: We are going to "Vectorize" the cleaned txt documents TO vector of  FIXED LENGTH!!
+Can be done using 2 Techniques:
+- Bag of Words Model: "binary", "count", "tfidf", "freq"
+- Word Embedding: Word2Vec (Skipgram, CBOW), GloVe, fastText
+
+---------------------
+Bag of Words Model:
+
+cleaned_doc1: "I love cooking"
+cleaned_doc2: "I cooked tasty pasta today"
+
+"binary" Model: marks the presence of a word from the vocab in the document.
+
+vocab: [I, love, cooking, cooked, pasta, today,  ?]
+doc1:  [1    1     1        0       0     0      0]
+doc2:  [1    0     0        1       1     1      0]
+
+the length of each document-vector = total no. of words in the vocab !!!
+X = [ 2x7]
+
+X_train = 1800 x 14777
+X_test  = 200 x 14777
+
+=======================
+
+
+"count" Model: retains the count of a word from the vocab in the document.
+cleaned_doc1: "I love cooking"
+cleaned_doc2: "today I cooked tasty pasta today"
+
+vocab: [I, love, cooking, cooked, pasta,  today,  ?]
+doc1:  [1    1           1             0             0             0     0]
+doc2:  [1    0           0            1              1             2      1]
+
+
+======================
+
+"freq" Model: retains the count of a word from the vocab in the document AND normalizing it (divide by total no. of words in the document)
+
+cleaned_doc1: "I love cooking"
+cleaned_doc2: "today I cooked tasty pasta today"
+
+vocab: [I, love, cooking, cooked, pasta,  today,  ?]
+doc1:  [1    1           1             0             0             0     0]
+doc2:  [1    0           0            1              1             2      1]
+
+doc1_normalised: [1    1           1             0             0             0     0]/ len(doc1)
+doc2_normalised: [1    0           0            1              1             2      1] / len(doc2)
+
+=============================
+
+tfidf: TF_score * IDF_score
+
+TF = Term Freq = no. of times the word appears in a given doc / (total no. of words in the doc)
+e.g. In a doc contianing 1000 words, "Python" appears 200 times. 
+then TF for Python = 200/1000
+
+cleaned_doc2: "today I cooked tasty pasta today"
+TF for "today" = 2/6
+
+IDF = Inverse Document Freq = log(1+no. of documents / 1+no. of documents in which this word appeared)
+IDF will be high for those words which are LESS freq in the overall corpus!!
+
+the actual features will the TFIDF scores of the words, insteads its freq or count or presence !!!
+
+====================
+Problems with B0W models:
+- Loss of context
+- The vectorized documents ( feature-matix / document-term matrix) is highly SPARSE!!
+
+Another possible model: Co-occurence matrix
+
+
+---------
+To overcome the above problems, we use Word Embedding!
+- Main diff is in WE, we encode each word into a fixed length DENSE vector (this is a hyperparam, 50,100, 200, 300), alongwith each document 
+documet vector length will depend on the vocab size.
+
+e.g. "king" = [0.334, 0.212, ....] This vector captures the context of the words in the document.
+
+Word2vec & GloVe: are Deep Learning models
+
+(A) Pre-Defined Architectures for WE (for this use GENSIM)
+Word2vec: CBOW, SG (vector captures the context of the words in the given document)
+GloVe: vector captures the context of the words in the entire corpus (better, slower)
+use these architectures & TRAIN on your own dataset to get the WE
+
+(B) Otherwise you can use Keras Embedding Layer to create your OWN word Ebeddings!!!
+
+(C) Use-pretrained WE models!! (Word2vec or GloVe, and include the weights)
+https://nlp.stanford.edu/projects/glove/
+https://www.kaggle.com/leadbest/googlenewsvectorsnegative300/
+
+https://textblob.readthedocs.io/en/dev/index.html
+========================
+
+Word2vec : Skip Gram or CBOW
+
+
+
+                                                   ['and', 'document', 'first', 'is', 'one', 'second', 'the', 'third', 'this']
+
+'This is the first document.',    0             1                  1        1     0          0             1          0        1
+
+'This document is the               0              2                  0       1     0          1            1            0        1
+second document .',
+
+4 x 9
+
+(1,2)
+(2,2)
+(3,3)
+
+================
+
+[0.1 0.01 0.8 0.4 -0.35 0.2 0.99]
+
+
+
+
+
+
+
+

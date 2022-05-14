@@ -1,0 +1,115 @@
+Mathematical pre-req for Data Science & Machine Learning & Deep Learning:
+- Probaility & Stats (incl. prob. distributions)
+- Linear Algebra
+- Matrix Calculus (multivariate calculus)
+- Convex Optimization
+
+=======================================
+
+
+Distributions of Python:
+- Anaconda: Spyder IDE + Jupyter
+- Enthought (CanoPy IDE)
+
+Distribution: they will "package" Python alongwith some very imp. additional packages.
+- Core Python Kernel (Python Interpretor & execution).. CLI (command line interface)
+- ~386 packages
+- IDE: Code Editor + Syntax highlighter + Code Autocomplete suggestion 
+
+Other IDEs:Spyder, Jupyter, Canopy, VS Code, PyCharm... 
+
+Spyder IDE: Code Editor + Syntax highlighter + Code Autocomplete suggestion + debugger + Var Explorer + File explorer + Help... >>> File/code is saved as .PY file
+
+Jupyter Notebook: Code Editor + Syntax highlighter + Code Autocomplete suggestion 
+	+ you can save the output of the previuosly-executed codes + plots + HTML Documentation of your code + Mathematical equations + external images + .....  >>>> File/code is saved as .IPYNB file
+
+================
+Andrea Karl: so what is the logic in having deifferent cells? ie. how should the code be divided?
+Andrea Karl : why have different cells for code?
+
+
+
+================
+>> conda list   .............> lists out all the python packages installed in the current environment, incl the version numbers, and build no.
+
+>> conda list pkgname ...... > list the vers iion of the package installed
+
+>> pip install pkgname ...... > this will install the "pkgname" using the PIP program
+if the above method gives you an error:
+
+>> 
+
+===============
+
+Packages >>> modules >> functions
+
+===============
+
+Most imp. Python Packages:
+- NumPy: All mathematical manipulations/analyis of data... Numpy arrays are "core" datatype behind most other packages (Pandas, Scipy, sklearn, image processing... )
+rand() in the "random" module of numpy package
+>> numpy.random.rand()
+
+- Pandas(DF, Series are wrapper over numpy arrays): for data wrangling, cleaning, preprocessing... some basic statistical analysis
+
+- SciPy: Collection of modules/functions for advanced scientific applications: Optimization, signal processing, image processing, Numerical calculus (integration), special function, sparse matrices, linear algebra..
+
+- Matplotlib: main data-viz engine
+- For data-viz wrappers over matplotlib: seaborn, bokeh, cufflinks, plotly, dash, sweetviz
+
+- For automated Data Analysis (EDA): pandas-profiling, sweetviz, bamboolib (GUI for Pandas), mito
+
+- For Statistical Analysis: scipy.stats, statsmodels,
+
+- For machine learning: Scikit-learn, Xgboost, LightGBM, CatBoost, imblearn, pyod, ....
+
+- Deep Learning: TensorFlow, Keras (wrapper over TensorFlow or Theano), PyTorch, Fast AI, Theano, Caffe..
+
+- For Analysing Big Data: dask, vaex, PySpark
+
+- For Image Processing: OpenCV, scikit-image, Pillow...
+
+- NLP (textual-data Analytics): nltk & SpaCy, Gensim, Textblob, wordcloud, pywsd, etc...
+
+- Web Scraping (fetching data/info from the webpages using a code): BeautifulSoup, Scrapy
+
+- Python for Automation: Selenium (browser automation)
+
+- Create applications for deploying ML/DL models: Flask, Django, Flasgger, TF Serving
+
+- GUI in Python: PyQt, Tkinter, PySimpleGUI....
+
+
+
+----------------------------------------------
+
+Data Analytics:
+- Descriptive DA: qualitative, quantitative
+- EDA: 
+- Inferential Statistics: Hypothesis testing
+- Prescriptive and/or Predictive
+
+
+=-=============
+
+- Python data types
+- Python containers
+- Control flow statemtents, loops
+- functions, modules 
+- lambda, map, filter
+- numpy
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

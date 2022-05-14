@@ -1,0 +1,48 @@
+EDA & HT
+
+Motivation for EDA (why do you want to do EDA?): Identify the problems/challenges in the data
+getting insights on the data (relationship of the problem with the data)
+- Identifying the data types of diff variables/features!!
+- Distribution & Description of/about the data
+- (co)Relation between indep & dep var
+- (co)Relation between indep among themselves (multicollinearity)
+- Finding missing values
+ -Identifying outliers
+- Finding duplicate data
+- Finding whther your dataset is imbalanced (for classification problems only)
+- Finding insignificant features
+- Data validity !!
+- Identifying which variable probably needs to be "Scaled"
+- Identifying what type of encoding will be needed for the categorical variables
+- 
+- 
+
+====================
+EDA: 
+1) we can pick individual col... and write our own codes for analyses..
+2) we can use some packages ... pandas-profiling, sweetviz, bamboolib (it is a wrapper over Pandas DF)
+3) we can use some "templated-codes" or functions for analysis
+
+
+==========================
+Flow of any ML/DL project:
+0. Problem Identification, validation of the data
+1. Load the dataset 
+2. Data Analysis: Descriptive (Qualitative, Quantitative) & Inferential (Estimations, Hypothesis testing)
+3. Data Pre-processing (ensure the data is "right"/"fit" for modelling)
+- Cleaning the data (missing values, outliers, muticollinearity, remove duplicates)
+- Basic Transformations needed to start building a baseline model (w/o this the model cannot be made)
+(Encoding of the categorical variables)!!
+
+4. Create Baseline model(s) with bare minimum transformations on the data.
+
+5. Improvise your data (Feature Engineering, Feature Selection, Feature Transformations)
+(DR, imbalanced, diff scalers, transformers, encoders. ... )
+
+6. Model Evaluation & Selection (serious ML starts).... iterative process  >> using CV
+
+7. Hyper param tuning (finding the best param for you models)
+
+8. Finalise your model (re-train your model using ALL the data available using the optimal/best values of the HP)
+
+9. Save/deploy the model for later use/validation/future prediction.
