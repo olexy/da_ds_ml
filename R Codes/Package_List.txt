@@ -1,0 +1,43 @@
+List of packages to be installed - 
+
+sample code
+install.packages("vcd")
+
+you can install all in one go as well using sample code below -
+install.packages (c("vcd","plyr","forecast")
+library(vcd)
+vcd
+plyr
+plotrix
+wordcloud
+forecarst
+swirl
+tm
+grid
+caret
+scales
+ggplot2
+raster
+usdm
+sp
+raster
+caret
+MASS
+ResourceSelection
+survey
+pscl
+InformationValue
+lmtest
+Rserve
+zoo
+lattice
+e1071
+survival
+rpart
+rpart.plot
+randomForest
+Matrix
+grid
+arules
+arulesViz
+plotly
